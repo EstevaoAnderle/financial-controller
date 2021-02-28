@@ -1,0 +1,1 @@
+DB_CONNECTION="mongodb+srv://admin:admin@igti.dbbd7.mongodb.net/accounts?retryWrites=true&w=majority"
