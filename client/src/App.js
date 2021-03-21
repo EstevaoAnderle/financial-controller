@@ -3,6 +3,7 @@ import TransactionList from './components/TransactionList';
 import * as api from './api/apiService';
 import M from 'materialize-css';
 import Modal from './components/TransactionModal';
+import Overview from './components/Overview';
 
 export default function App() {
   const [filterText, setFilterText] = useState('');
@@ -114,9 +115,7 @@ export default function App() {
           <nav className="teal">
             <div className="navbar-home">
               <div className="content-header">
-                <strong className="font-xlarge">
-                  Financial Controller
-                </strong>
+                <strong className="font-xlarge">Financial Controller</strong>
               </div>
             </div>
           </nav>
@@ -125,6 +124,15 @@ export default function App() {
 
       <main className="container-main">
         <div className="row">
+          {
+            <Overview
+              listFilter={listFilter}
+              period={period}
+              onPeriod={hadleChangeSelected}
+              isModalOpen={isModalOpen}
+              isPreloader={isPreloader}
+            />
+          }
           <TransactionList
             listFilter={listFilter}
             filterText={filterText}

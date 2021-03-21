@@ -26,7 +26,7 @@ export default function TransactionList(props) {
 
   return (
     // Ideal manter como s6 pra dividir a tela exatamente
-    <div id="transaction-list" className="col s12">
+    <div id="transaction-list" className="col s6">
       <h4 className="center">Lançamentos</h4>
       {!isModalOpen && (
         <div className="content-search">
