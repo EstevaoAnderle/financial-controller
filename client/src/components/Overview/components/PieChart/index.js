@@ -28,8 +28,8 @@ export default function PieChart({ dataCategories }) {
   const pieData = [['Category', 'Value'], ...dataCategories];
   return (
     <div id="pie-chart" className="center">
-      {/* <span className="font-large">Despesas por categoria</span> */}
-      {/* <Chart chartType="PieChart" data={pieData} options={pieOptions} /> */}
+      {<span className="font-large">Despesas por categoria</span>}
+      {<Chart chartType="PieChart" data={pieData} options={pieOptions} />}
     </div>
   );
 }
